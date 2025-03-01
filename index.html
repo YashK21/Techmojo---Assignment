@@ -3,10 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Techmojo</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Spinning Wheel</title>
+    <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/EaselPlugin.min.js"></script>
   </head>
   <body>
-    <script src="script.js" defer></script>
+    <h2>Wheel Spin Game</h2>
+
+    <label for="numSlices">Enter number of slices (6, 8, 12):</label>
+    <input type="number" id="numSlices" min="6" max="12" step="2" value="6" />
+    <button id="setWheelBtn">Set Wheel</button>
+
+    <p><strong>* Available slices: 6, 8, 12</strong></p>
+
+    <label for="stopAt">Enter wedge number to stop at:</label>
+    <input type="number" id="stopAt" min="1" max="12" value="1" />
+    <button id="spinBtn">Spin</button>
+
+    <div id="canvas">
+      <canvas id="circleCanvas" width="500" height="500"></canvas>
+    </div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
